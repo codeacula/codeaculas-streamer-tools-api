@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Codeacula.Redis\Codeacula.Redis.csproj" />
+    <ProjectReference Include="..\Codeacula.TestCommon\Codeacula.TestCommon.csproj" />
+  </ItemGroup>
+
+</Project>

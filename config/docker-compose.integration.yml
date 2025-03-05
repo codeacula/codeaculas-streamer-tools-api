@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  codeacula-api:
+    build:
+      context: ..
+      dockerfile: config/Dockerfile
+      target: test
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=codeacula_test;User Id=sa;Password=Password@1;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+      - redis
+      - mongo
+    restart: "no"

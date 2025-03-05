@@ -1,0 +1,51 @@
+version: '3.9'
+services:
+  codeacula-api:
+    build:
+      context: ..
+      dockerfile: config/Dockerfile
+      target: dev # Use the dev stage
+    volumes:
+      - ../src:/app/src
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - DOTNET_WATCH_SUPPRESS_EMOJIS=1
+      - Twitch__ClientSecret=dev-only-secret
+      - Jwt__Key=dev-jwt-key
+      - Jwt__RefreshKey=dev-refresh-key
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=codeacula;User Id=sa;Password=Password@1;TrustServerCertificate=True;
+      - ConnectionStrings__Redis=redis:6379
+      - ConnectionStrings__Kafka=kafka:9092
+      - MONGO_URI=mongodb://root:example@mongo:27017
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    environment:
+      SA_PASSWORD: "Password@1"
+      ACCEPT_EULA: "Y"
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  mongo:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  sqlserver-data:
+  redis-data:
+  mongo-data:

@@ -1,0 +1,84 @@
+{
+  "editor.tabSize": 2,
+  "github.copilot.chat.completionContext.typescript.mode": "on",
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.search.semanticTextResults": true,
+  "files.trimTrailingWhitespace": true,
+  "dotnetAcquisitionExtension.enablePreviewFeatures": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "cSpell.words": [
+    "Automod",
+    "Codeacula",
+    "dbname",
+    "Hsts"
+  ],
+  "csharp.preview.improvedLaunchExperience": true,
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "docs/CODING_STYLE.md",
+    },
+    {
+      "file": "docs/CONTRIBUTING.md",
+    },
+    {
+      "file": "docs/API_GUIDE.md",
+    },
+    {
+      "file": "docs/PROJECT_STRUCTURE.md",
+    },
+  ],
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "file": "docs/CODING_STYLE.md",
+    },
+    {
+      "file": "docs/CODE_REVIEW.md"
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": "docs/COMMIT_GUIDELINES.md"
+    }
+  ],
+  "github.copilot.enable": {
+    "markdown": true
+  },
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.testGeneration.instructions": [
+    {
+      "file": "docs/CODING_STYLE.md",
+    },
+    {
+      "file": "docs/TESTING.md"
+    }
+  ],
+  "ipynb.experimental.serialization": true,
+  "github.copilot.chat.setupTests.enabled": true,
+  "testing.alwaysRevealTestOnStateChange": true,
+  "testing.coverageToolbarEnabled": true,
+  "testing.followRunningTest": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always",
+    "source.addMissingImports": "always"
+  },
+  "csharp.showOmnisharpLogOnError": false,
+  "omnisharp.autoStart": false,
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.typeMembers.propertyGenerationBehavior": "preferAutoProperties",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+  "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": false,
+  "csharp.debug.console": "externalTerminal",
+  "dotnet.automaticallySyncWithActiveItem": true,
+  "dotnet.preferVisualStudioCodeFileSystemWatcher": false,
+  "dotnet.testWindow.disableBuildOnRefresh": false,
+  "editor.defaultFormatter": "ms-dotnettools.csdevkit",
+  "editor.formatOnSave": true,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "markdown.validate.enabled": true
+}

@@ -1,0 +1,112 @@
+using Codeacula.Core;
+using Codeacula.Core.Errors;
+using Codeacula.Core.Events;
+using Codeacula.Core.Repositories;
+using Codeacula.MSSQL.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace Codeacula.MSSQL.Repositories;
+
+/// <summary>
+/// Base implementation of event sourcing repository
+/// </summary>
+public abstract class BaseEventSourceRepo(
+  ISqlServerDBContext dbContext,
+  DbSet<EventSourceEventDBO> dbSet
+)
+{
+  private readonly ISqlServerDBContext _dbContext = dbContext;
+  private readonly DbSet<EventSourceEventDBO> _dbSet = dbSet;
+
+  private static ValidationError BadId()
+  {
+    return new ValidationError("AggregateId cannot be empty.");
+  }
+
+  public async Task<OperationResult<IReadOnlyList<IncomingEvent>>> GetEventsByAggregateIdAsync(Guid aggregateId)
+  {
+    if (aggregateId == Guid.Empty)
+    {
+      return BadId();
+    }
+
+    var events = await _dbSet
+      .Where(e => e.AggregateId == aggregateId)
+      .OrderBy(e => e.Version)
+      .AsNoTracking()
+      .ToListAsync();
+
+    return events.AsReadOnly();
+  }
+
+  public async Task<OperationResult<IncomingEvent?>> GetLatestEventByAggregateIdAsync(Guid aggregateId)
+  {
+    if (aggregateId == Guid.Empty)
+    {
+      return BadId();
+    }
+
+    var latestEvent = await _dbSet
+      .Where(e => e.AggregateId == aggregateId)
+      .OrderByDescending(e => e.Version)
+      .AsNoTracking()
+      .FirstOrDefaultAsync();
+
+    return latestEvent;
+  }
+
+  public async Task<OperationResult<int>> DeleteEventsByAggregateIdAsync(Guid aggregateId)
+  {
+    if (aggregateId == Guid.Empty)
+    {
+      return BadId();
+    }
+
+    var events = await _dbSet
+      .Where(e => e.AggregateId == aggregateId)
+      .ToListAsync();
+
+    _dbSet.RemoveRange(events);
+
+    return await _dbContext.SaveChangesAsync();
+  }
+
+  public async Task<OperationResult<bool>> ValidateEventAsync(IncomingEvent ev)
+  {
+    if (ev.AggregateId == Guid.Empty)
+    {
+      return BadId();
+    }
+
+    var latestEvent = await GetLatestEventByAggregateIdAsync(ev.AggregateId);
+
+    if (latestEvent.IsError)
+    {
+      return new ValidationError($"Failed to validate event: {latestEvent.Error}");
+    }
+
+    if (latestEvent.Value is null)
+    {
+      return true; // No latest event, so the current event is valid as the first event
+    }
+
+    if (ev.Version != latestEvent.Value.Version + 1)
+    {
+      return new EventOutOfOrderError();
+    }
+
+    return true;
+  }
+
+  public async Task<OperationResult<int>> SaveAsync(IncomingEvent ev)
+  {
+    var validationResult = await ValidateEventAsync(ev);
+    if (validationResult.IsError)
+    {
+      return new ValidationError($"Failed to validate event: {validationResult.Error}");
+    }
+
+    await _dbSet.AddAsync(ev);
+    return await _dbContext.SaveChangesAsync();
+  }
+}
