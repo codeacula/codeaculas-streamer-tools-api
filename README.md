@@ -40,7 +40,7 @@ cd codeacula-api
 docker-compose -f config/docker-compose.override.yml up --build -d
 
 # Run the API manually
-dotnet run --project src/Codeacula.API
+dotnet run --project src/CodeaculaStreamerTools.API
 ```
 
 ### **Configuration**
@@ -52,12 +52,12 @@ All environment variables are managed via **Docker configuration**. Update the a
 ```plaintext
 /codeacula-api
 ├── src/                            # Main application source code
-│   ├── Codeacula.API/              # REST API service
-│   ├── Codeacula.Core/             # Domain logic & event sourcing
-│   ├── Codeacula.Infrastructure/   # External integrations
-│   ├── Codeacula.MSSQL/            # SQL Server implementation
-│   ├── Codeacula.MongoDB/          # Read models (MongoDB)
-│   ├── Codeacula.Redis/            # Caching and Pub/Sub
+│   ├── CodeaculaStreamerTools.API/              # REST API service
+│   ├── CodeaculaStreamerTools.Core/             # Domain logic & event sourcing
+│   ├── CodeaculaStreamerTools.Infrastructure/   # External integrations
+│   ├── CodeaculaStreamerTools.MSSQL/            # SQL Server implementation
+│   ├── CodeaculaStreamerTools.MongoDB/          # Read models (MongoDB)
+│   ├── CodeaculaStreamerTools.Redis/            # Caching and Pub/Sub
 ├── tests/                          # Unit & Integration tests
 ├── config/                         # Docker, environment, and deployment configs
 ├── scripts/                        # Utility scripts for migrations, tests, etc.

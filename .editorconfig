@@ -296,3 +296,6 @@ dotnet_diagnostic.VSTHRD012.severity = none
 
 # VSTHRD003: Avoid awaiting foreign Tasks
 dotnet_diagnostic.VSTHRD003.severity = none
+
+# MA0018: Do not declare static members on generic types (deprecated; use CA1000 instead)
+dotnet_diagnostic.MA0018.severity = silent

@@ -9,12 +9,12 @@ Codeacula's Streamer Tools follows a modular, well-structured architecture to en
 ```plaintext
 /codeacula-api
 ├── src/                 # Main application source code
-│   ├── Codeacula.API/   # REST API service
-│   ├── Codeacula.Core/  # Domain logic & event sourcing
-│   ├── Codeacula.Infrastructure/ # External integrations
-│   ├── Codeacula.MSSQL/ # SQL Server implementation
-│   ├── Codeacula.MongoDB/ # Read models (MongoDB)
-│   ├── Codeacula.Redis/ # Caching and Pub/Sub
+│   ├── CodeaculaStreamerTools.API/   # REST API service
+│   ├── CodeaculaStreamerTools.Core/  # Domain logic & event sourcing
+│   ├── CodeaculaStreamerTools.Infrastructure/ # External integrations
+│   ├── CodeaculaStreamerTools.MSSQL/ # SQL Server implementation
+│   ├── CodeaculaStreamerTools.MongoDB/ # Read models (MongoDB)
+│   ├── CodeaculaStreamerTools.Redis/ # Caching and Pub/Sub
 ├── tests/               # Unit & Integration tests
 ├── config/              # Docker, environment, and deployment configs
 ├── scripts/             # Utility scripts for migrations, tests, etc.
@@ -28,12 +28,12 @@ Codeacula's Streamer Tools follows a modular, well-structured architecture to en
 
 This is where the core application resides. It is broken down into several submodules:
 
-- **Codeacula.API/** – The primary REST API, handling requests, authentication, and routing.
-- **Codeacula.Core/** – Contains business logic, domain models, and event sourcing components.
-- **Codeacula.Infrastructure/** – Handles external integrations such as Twitch API, OBS WebSockets, and third-party services.
-- **Codeacula.MSSQL/** – Implements persistence logic using SQL Server.
-- **Codeacula.MongoDB/** – Manages read models using MongoDB for CQRS.
-- **Codeacula.Redis/** – Implements caching and Pub/Sub functionality for real-time communication.
+- **CodeaculaStreamerTools.API/** – The primary REST API, handling requests, authentication, and routing.
+- **CodeaculaStreamerTools.Core/** – Contains business logic, domain models, and event sourcing components.
+- **CodeaculaStreamerTools.Infrastructure/** – Handles external integrations such as Twitch API, OBS WebSockets, and third-party services.
+- **CodeaculaStreamerTools.MSSQL/** – Implements persistence logic using SQL Server.
+- **CodeaculaStreamerTools.MongoDB/** – Manages read models using MongoDB for CQRS.
+- **CodeaculaStreamerTools.Redis/** – Implements caching and Pub/Sub functionality for real-time communication.
 
 ### **2. `tests/` - Testing**
 
@@ -77,7 +77,7 @@ Includes:
 
 ## Best Practices
 
-- **Follow Domain-Driven Design (DDD)**: Core logic remains in `Codeacula.Core/`.
+- **Follow Domain-Driven Design (DDD)**: Core logic remains in `CodeaculaStreamerTools.Core/`.
 - **Adopt CQRS/Event Sourcing**: Read models are separate from event-based writes.
 - **Use containerization**: Services are designed to run in **Dockerized environments**.
 - **Follow the commit guidelines**: Use structured commit messages for maintainability.

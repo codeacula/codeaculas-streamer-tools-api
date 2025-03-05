@@ -3,4 +3,4 @@
 dotnet restore
 
 # Run dotnet watch for rapid iteration.
-dotnet watch run --project src/Codeacula.API/Codeacula.API.csproj
+dotnet watch run --project src/CodeaculaStreamerTools.API/CodeaculaStreamerTools.API.csproj

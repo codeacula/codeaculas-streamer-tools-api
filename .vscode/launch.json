@@ -10,9 +10,9 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/src/Codeacula.API/bin/Debug/net9.0/Codeacula.API.dll",
+      "program": "${workspaceFolder}/src/CodeaculaStreamerTools.API/bin/Debug/net9.0/CodeaculaStreamerTools.API.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/src/Codeacula.API",
+      "cwd": "${workspaceFolder}/src/CodeaculaStreamerTools.API",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {

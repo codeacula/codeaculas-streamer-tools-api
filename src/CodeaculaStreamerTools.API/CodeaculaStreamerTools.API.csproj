@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3a6f16ce-be43-4d59-9661-028f4c4b8240</UserSecretsId>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeaculaStreamerTools.Core\CodeaculaStreamerTools.Core.csproj" />
+    <ProjectReference Include="..\CodeaculaStreamerTools.Infrastructure\CodeaculaStreamerTools.Infrastructure.csproj" />
+    <ProjectReference Include="..\CodeaculaStreamerTools.MongoDB\CodeaculaStreamerTools.MongoDB.csproj" />
+    <ProjectReference Include="..\CodeaculaStreamerTools.MSSQL\CodeaculaStreamerTools.MSSQL.csproj" />
+    <ProjectReference Include="..\CodeaculaStreamerTools.Redis\CodeaculaStreamerTools.Redis.csproj" />
+  </ItemGroup>
+
+</Project>

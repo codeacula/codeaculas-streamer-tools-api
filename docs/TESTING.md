@@ -4,10 +4,10 @@
 
 ### File Structure
 
-- Save tests in the appropriate project directory in the `Codeacula.Tests` project, maintaining a parallel structure to the code being tested.
+- Save tests in the appropriate project directory in the `CodeaculaStreamerTools.Tests` project, maintaining a parallel structure to the code being tested.
 - Append "Tests" to both the project name and file name. For instance:
   - If the code file is located at `/{ProjectName}/{FilePath}/{FileName}.cs`, the corresponding test file should be located at:
-    `/Codeacula.Tests/{ProjectName}/{FilePath}/{FileName}Tests.cs`.
+    `/CodeaculaStreamerTools.Tests/{ProjectName}/{FilePath}/{FileName}Tests.cs`.
 
 ### Test Framework
 
