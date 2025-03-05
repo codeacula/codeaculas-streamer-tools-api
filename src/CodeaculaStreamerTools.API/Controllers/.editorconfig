@@ -1,0 +1,3 @@
+# Disable CA1515 only for controllers
+[*.cs]
+dotnet_diagnostic.CA1515.severity = none

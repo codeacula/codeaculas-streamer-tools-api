@@ -1,0 +1,11 @@
+.git
+.gitignore
+README.md
+config/docker-compose*.yml
+tests/
+migrations/
+build/
+bin/
+obj/
+test-results/
+.vscode/

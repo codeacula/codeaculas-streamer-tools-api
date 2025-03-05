@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  codeaculas-streamer-tools-api:
+    build:
+      context: ..
+      dockerfile: config/Dockerfile
+      target: production
+    environment:
+      - Twitch__ClientSecret=${TWITCH_CLIENT_SECRET}
+      - Jwt__Key=${JWT_KEY}
+      - Jwt__RefreshKey=${JWT_REFRESH_KEY}
+      - ConnectionStrings__DefaultConnection=${DB_CONNECTION}
+      - ConnectionStrings__Redis=${REDIS_CONNECTION}
+      - ConnectionStrings__Kafka=${KAFKA_CONNECTION}
+      - MONGO_URI=${MONGO_URI}
