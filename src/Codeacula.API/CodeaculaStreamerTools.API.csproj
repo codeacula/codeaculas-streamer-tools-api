@@ -21,11 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codeacula.Core\Codeacula.Core.csproj" />
-    <ProjectReference Include="..\Codeacula.Infrastructure\Codeacula.Infrastructure.csproj" />
-    <ProjectReference Include="..\Codeacula.MongoDB\Codeacula.MongoDB.csproj" />
-    <ProjectReference Include="..\Codeacula.MSSQL\Codeacula.MSSQL.csproj" />
-    <ProjectReference Include="..\Codeacula.Redis\Codeacula.Redis.csproj" />
+    <ProjectReference Include="..\Codeacula.Core\CodeaculaStreamerTools.Core.csproj" />
+    <ProjectReference Include="..\Codeacula.Infrastructure\CodeaculaStreamerTools.Infrastructure.csproj" />
+    <ProjectReference Include="..\Codeacula.MongoDB\CodeaculaStreamerTools.MongoDB.csproj" />
+    <ProjectReference Include="..\Codeacula.MSSQL\CodeaculaStreamerTools.MSSQL.csproj" />
+    <ProjectReference Include="..\Codeacula.Redis\CodeaculaStreamerTools.Redis.csproj" />
   </ItemGroup>
 
 </Project>

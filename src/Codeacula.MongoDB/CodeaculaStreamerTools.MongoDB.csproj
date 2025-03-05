@@ -7,7 +7,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codeacula.Core\Codeacula.Core.csproj" />
+    <ProjectReference Include="..\Codeacula.Core\CodeaculaStreamerTools.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

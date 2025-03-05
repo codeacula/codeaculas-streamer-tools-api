@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Codeacula.Core\Codeacula.Core.csproj" />
-    <ProjectReference Include="..\Codeacula.TestCommon\Codeacula.TestCommon.csproj" />
+    <ProjectReference Include="..\..\src\Codeacula.Redis\CodeaculaStreamerTools.Redis.csproj" />
+    <ProjectReference Include="..\Codeacula.TestCommon\CodeaculaStreamerTools.TestCommon.csproj" />
   </ItemGroup>
 
 </Project>
