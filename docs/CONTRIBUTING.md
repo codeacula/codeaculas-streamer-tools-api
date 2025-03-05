@@ -10,14 +10,14 @@ Thank you for your interest in contributing to **Codeacula's Streamer Tools**! T
 2. Clone your fork to your local machine:
 
    ```sh
-   git clone https://github.com/your-username/codeacula-api.git
-   cd codeacula-api
+   git clone https://github.com/your-username/codeaculas-streamer-tools-api.git
+   cd codeaculas-streamer-tools-api
    ```
 
 3. Add the upstream repository:
 
    ```sh
-   git remote add upstream https://github.com/your-org/codeacula-api.git
+   git remote add upstream https://github.com/your-org/codeaculas-streamer-tools-api.git
    ```
 
 ### **2️⃣ Create a Feature Branch**

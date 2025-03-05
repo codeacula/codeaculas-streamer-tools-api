@@ -7,7 +7,7 @@ Codeacula's Streamer Tools follows a modular, well-structured architecture to en
 ## Directory Layout
 
 ```plaintext
-/codeacula-api
+/codeaculas-streamer-tools-api
 ├── src/                 # Main application source code
 │   ├── CodeaculaStreamerTools.API/   # REST API service
 │   ├── CodeaculaStreamerTools.Core/  # Domain logic & event sourcing
