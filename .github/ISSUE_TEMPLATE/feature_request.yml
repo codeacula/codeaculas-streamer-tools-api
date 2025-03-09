@@ -5,11 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "## ✨ Feature Request\nHave an idea for a new feature? Let us know!\n\n💡 **Before you submit:**\nCheck [GitHub Discussions](../../discussions) to see if this idea has been discussed before."
-  - type: input
-    id: summary
+  - type: textarea
+    id: description
     attributes:
-      label: "Summary"
-      placeholder: "Ex: Add a Twitch chat auto-moderation system."
+      label: "Description"
+      description: "Describe the feature in detail."
   - type: textarea
     id: problem
     attributes:
@@ -18,10 +18,6 @@ body:
     id: solution
     attributes:
       label: "Proposed Solution"
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: "Alternatives Considered"
   - type: textarea
     id: extra
     attributes:
