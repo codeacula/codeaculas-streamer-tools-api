@@ -5,11 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "## 🐛 Bug Report\nThanks for taking the time to report a bug!\n\n🚨 **Before you submit:**\nPlease check [GitHub Discussions](../../discussions) to see if this issue has already been reported."
-  - type: input
-    id: summary
+  - type: textarea
+    id: description
     attributes:
-      label: "Summary"
-      placeholder: "Ex: Twitch chat commands are not responding."
+      label: "Description"
+      description: "Describe the issue in detail."
   - type: textarea
     id: steps
     attributes:
