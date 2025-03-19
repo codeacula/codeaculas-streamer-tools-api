@@ -26,8 +26,8 @@ Make sure you have the following installed:
 
 ```sh
 # Clone the repository
-git clone git@github.com:codeacula/codeaculas-streamer-tools-api.git
-cd codeaculas-streamer-tools-api
+git clone git@github.com:codeacula/codeaculas-streamer-tools.git
+cd codeaculas-streamer-tools
 
 # Start development environment with hot reload
 ./scripts/start-dev.ps1
@@ -50,7 +50,7 @@ All environment variables are managed via **Docker configuration**. Update the a
 ## 📂 Project Structure
 
 ```plaintext
-/codeaculas-streamer-tools-api
+/codeaculas-streamer-tools
 ├── src/                            # Main application source code
 │   ├── CodeaculaStreamerTools.API/              # REST API service
 │   ├── CodeaculaStreamerTools.Core/             # Domain logic & event sourcing

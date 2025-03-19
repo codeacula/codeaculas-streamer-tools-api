@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         ⚠️ **Important: If you're not sure this is a security issue, please report it as a regular bug instead.**
-        **[Submit a Bug Report](https://github.com/codeacula/codeaculas-streamer-tools-api/issues/new?template=bug_report.yml)**
+        **[Submit a Bug Report](https://github.com/codeacula/codeaculas-streamer-tools/issues/new?template=bug_report.yml)**
 
         If this **is** a security issue, please proceed with this form.
         **For sensitive security issues, do not open a public issue!** Instead, report it privately via:

@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  codeaculas-streamer-tools-api:
-    image: codeaculas-streamer-tools-api
+  codeaculas-streamer-tools:
+    image: codeaculas-streamer-tools
     build:
       context: ..
       dockerfile: config/Dockerfile

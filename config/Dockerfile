@@ -4,7 +4,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 COPY ../ ./
-RUN dotnet restore codeaculas-streamer-tools-api.sln
+RUN dotnet restore codeaculas-streamer-tools.sln
 RUN dotnet build --configuration Release --output /app/build
 
 # ============================
@@ -13,7 +13,7 @@ RUN dotnet build --configuration Release --output /app/build
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS production
 WORKDIR /app
 COPY --from=build /app/build /app/build
-CMD ["dotnet", "/app/build/codeaculas-streamer-tools-api.dll"]
+CMD ["dotnet", "/app/build/codeaculas-streamer-tools.dll"]
 
 # ============================
 # 🔹 STAGE 3: Development
