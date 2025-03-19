@@ -5,15 +5,15 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{97AF87F7-5D42-4FC8-AC16-63E2F0164986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.API", "src\CodeaculaStreamerTools.API\CodeaculaStreamerTools.API.csproj", "{D1A9F0E1-1923-4EC5-AAB9-F6D2CA6A2F68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.API", "CodeaculaStreamerTools.API\CodeaculaStreamerTools.API.csproj", "{D1A9F0E1-1923-4EC5-AAB9-F6D2CA6A2F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Core", "src\CodeaculaStreamerTools.Core\CodeaculaStreamerTools.Core.csproj", "{1D038FD3-30CC-4BDF-8717-D4325350E0B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Core", "CodeaculaStreamerTools.Core\CodeaculaStreamerTools.Core.csproj", "{1D038FD3-30CC-4BDF-8717-D4325350E0B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.MSSQL", "src\CodeaculaStreamerTools.MSSQL\CodeaculaStreamerTools.MSSQL.csproj", "{5701BD18-0F00-450C-B0A8-AA0C2DE89E9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.MSSQL", "CodeaculaStreamerTools.MSSQL\CodeaculaStreamerTools.MSSQL.csproj", "{5701BD18-0F00-450C-B0A8-AA0C2DE89E9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.MongoDB", "src\CodeaculaStreamerTools.MongoDB\CodeaculaStreamerTools.MongoDB.csproj", "{CD79BE9E-63CB-403E-A8E0-529C5A793499}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.MongoDB", "CodeaculaStreamerTools.MongoDB\CodeaculaStreamerTools.MongoDB.csproj", "{CD79BE9E-63CB-403E-A8E0-529C5A793499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Redis", "src\CodeaculaStreamerTools.Redis\CodeaculaStreamerTools.Redis.csproj", "{62836A9B-C71B-4A5A-9CBE-F8671A05D7BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Redis", "CodeaculaStreamerTools.Redis\CodeaculaStreamerTools.Redis.csproj", "{62836A9B-C71B-4A5A-9CBE-F8671A05D7BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7AC7F6EB-E045-4C16-9B0F-FE9CD02CCBD4}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Redi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.TestCommon", "tests\CodeaculaStreamerTools.TestCommon\CodeaculaStreamerTools.TestCommon.csproj", "{FAA7397D-6E9B-4C9C-9D54-4D04E46518BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Infrastructure", "src\CodeaculaStreamerTools.Infrastructure\CodeaculaStreamerTools.Infrastructure.csproj", "{B631AE16-F30E-47A1-8F60-35C786098817}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeaculaStreamerTools.Infrastructure", "CodeaculaStreamerTools.Infrastructure\CodeaculaStreamerTools.Infrastructure.csproj", "{B631AE16-F30E-47A1-8F60-35C786098817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

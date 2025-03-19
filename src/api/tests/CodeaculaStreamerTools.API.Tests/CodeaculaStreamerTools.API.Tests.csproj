@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\api\CodeaculaStreamerTools.API\CodeaculaStreamerTools.API.csproj" />
+    <ProjectReference Include="..\api\CodeaculaStreamerTools.Infrastructure\CodeaculaStreamerTools.Infrastructure.csproj" />
+    <ProjectReference Include="deaculaStreamerTools.TestCommon\CodeaculaStreamerTools.TestCommon.csproj" />
+  </ItemGroup>
+
+</Project>
